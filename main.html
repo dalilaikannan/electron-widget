@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <img id="startButton" src="assets/start-button.png" alt="Start Button" onclick="cupAwake()"/>
+        <img id="sleepy-coffee-cup" src="assets/coffee-cup-sleepy.png" alt="sleepy coffee cup" />
+        <script>
+            const { ipcRenderer } = window.electron;
+
+            document.getElementById('startButton').addEventListener('click', function () {
+                ipcRenderer.send('button-pressed');
+                cupAwake();
+            });
+
+            function cupAwake() {
+                document.getElementById('sleepy-coffee-cup').src = "assets/cup-awake.png"; 
+            }
+
+          </script>
+    </body>
+</html>
