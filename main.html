@@ -4,7 +4,7 @@
     </head>
     <body>
         <img id="startButton" src="assets/start-button.png" alt="Start Button" onclick="cupAwake()"/>
-        <img id="sleepy-coffee-cup" src="assets/coffee-cup-sleepy.png" alt="sleepy coffee cup" />
+        <img id="coffeeCup" src="assets/coffee-cup-sleepy.png" alt="coffee cup" />
         <script>
             const { ipcRenderer } = window.electron;
 
@@ -14,7 +14,7 @@
             });
 
             function cupAwake() {
-                document.getElementById('sleepy-coffee-cup').src = "assets/cup-awake.png"; 
+                document.getElementById('coffeeCup').src = "assets/cup-awake-new.png"; 
             }
 
           </script>
